@@ -23,8 +23,9 @@ echo "Saisissez un message:\n";
 // Boucle qui permet d'envoyer des messages en boucle et en écrivant exit on ferme la connexion au socket
 while (true) {
     $message = readline();
+
     if ($message === 'exit') {
-        socket_write($socket, $message, 1000);
+        // socket_write($socket, $message, 1000);
         socket_close($socket);
         break;
     }
